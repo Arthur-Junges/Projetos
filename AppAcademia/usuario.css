@@ -5,11 +5,36 @@ body{
     padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
 }
 
 header {
+    display: flex;
     margin-top: 0px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(105, 23, 182);
     height: 100px;
+}
+
+h1 {
+    margin: 0px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto 90vw auto;
+}
+
+#um {
+    background-color: yellow;
+    width: auto;
+    height: 200px;
+    grid-column: 2;
+}
+
+#dois {
+    background-color: black;
+    grid-column: 2;
+    height: 200px;
 }
