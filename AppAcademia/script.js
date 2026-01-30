@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tela = document.getElementById('tela')
 
-    const linkLogin = document.querySelector('#painel #link a')
-    const linkRegistro = document.querySelector('#paineldois #link a')
+    const linkLogin = document.querySelector('#painel .link a')
+    const linkRegistro = document.querySelector('#paineldois .link a')
     
 
     if (linkLogin) {
