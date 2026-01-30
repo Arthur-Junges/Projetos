@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.747);
+}
+
+
+/* imagem no container tela, com as configurações background*/
+#tela {
+    background-image: url(../AppAcademia/imagem/pexels-dropshado-32543165.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: aquamarine;
+    border-radius: 30px;
+    width: 70vw;
+    height: 60vh;
+
+    display: flex;
+    overflow: hidden;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#tela > #painel {
+    background-color: white;
+    border-radius: 30px;
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    transition: transform 0.6s ease;
+    transform: translateX(0);
+    
+}
+
+
+h1{
+    margin: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: black;
+}
+
+#formulario{
+    text-align: center;
+}
+
+input{
+    width: 70%;
+    padding: 8px;
+
+    border-radius: 12px;
+    border: 1px solid #000000;
+    outline: none;
+
+    margin: 8px 0;
+    text-align: center;
+
+    font-size: 16px;
+    
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 150px;
+    background-color: #4e42eca9;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#link {
+    text-align: center;
+}
+
+#paineldois{
+    text-align: center;
+    background-color: white;
+    border-radius: 30px;
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    transition: transform 0.6s ease;
+    transform: translate(100%);
+    
+}
+
+#tela.login #painel {
+    transform: translateX(-100%);
+}
+
+#tela.login #paineldois {
+    transform: translateX(0);
+}

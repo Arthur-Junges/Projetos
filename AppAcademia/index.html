@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tela" class="registro">
+        
+        <div id="painel">
+            <h1>Registro</h1>
+            
+            <div>
+                <p id="formulario">
+                    <input id="regNome" type="text" placeholder="Digite seu nome" required> <br>
+                    <input id="regEmail" type="email" placeholder="Digite seu e-mail" required> <br>
+                    <input id="regSenha" type="password" placeholder="Digite sua senha" required minlength="5"> <br>
+                    <button id="botaodois" type="button">Registrar</button>
+                </p>
+            </div>
+            <p id="link">
+                Já tem uma conta? <a href="#">Faça login</a>
+            </p>
+        </div>
+        <div id="paineldois">
+            <h1>Login</h1>
+            
+            <div>
+                <p id="formulario">
+                    <input id="loginNome" type="text" placeholder="Digite seu nome" required> <br>
+                    <input id="loginEmail" type="email" placeholder="Digite seu e-mail" required> <br>
+                    <input id="loginSenha" type="password" placeholder="Digite sua senha" required minlength="5"> <br>
+                    <button type="button" id="botao">Login</button>
+                </p>
+            </div>
+            <p id="link">
+                Não tem uma conta? <a href="#">Faça Registro</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
