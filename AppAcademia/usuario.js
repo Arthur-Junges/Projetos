@@ -1,6 +1,9 @@
-const botao = document.getElementById('botao')
-const input = document.getElementById('input')
-const texto = document.getElementById('texto')
-botao.addEventListener('click', () =>{
-    texto.innerText = input.value
-})
+const email = localStorage.getItem("usuarioLogado")
+if (!email) {
+    window.location.href = "index.html"
+}
+import {getUsuarios} from './script.js'
+
+const usuario = getUsuarios
+console.log(usuario)
+

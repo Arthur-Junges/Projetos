@@ -77,7 +77,7 @@ function logout() {
     localStorage.removeItem("usuarioLogado")
 }
 
-function carregarUsuario() {
+export function carregarUsuario() {
     const email = localStorage.getItem("usuarioLogado")
     if (!email) return
 
