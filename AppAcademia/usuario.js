@@ -29,9 +29,9 @@ botao.addEventListener('click', () => {
     imc = imc.toFixed(1)
     
     if(peso > 0 && altura > 0){
-        resres.innerText = imc
+        resres.innerText = `Seu Imc é ${imc}`
     } else {
-        resres.innerText = 'Digite igual gnt débil'
+        resres.innerText = 'Digite valores válidos'
     }
 
 })

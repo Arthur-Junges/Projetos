@@ -10,17 +10,28 @@ body{
 
 header {
     display: flex;
+    padding-top: 12px 0px;
+    flex-direction: column;
     margin-top: 0px;
+    
     justify-content: center;
     align-items: center;
     background-color: rgb(105, 23, 182);
-    height: 100px;
+    
 }
 
 header > p{
-    justify-content: center;
-    align-content:end;
+    color: white;
+    margin-top: 0px;
+}
 
+#logout {
+    color: white;
+    background-color: black;
+    margin-bottom: 0px;
+    border: none;
+    cursor: pointer;
+    padding: 5px 12px;
 }
 
 h1 {
