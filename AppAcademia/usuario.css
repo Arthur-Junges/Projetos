@@ -17,6 +17,12 @@ header {
     height: 100px;
 }
 
+header > p{
+    justify-content: center;
+    align-content:end;
+
+}
+
 h1 {
     margin: 0px;
 }
@@ -24,17 +30,72 @@ h1 {
 main {
     display: grid;
     grid-template-columns: auto 90vw auto;
+    
+    gap: 5px;
 }
 
 #um {
-    background-color: yellow;
+    background-color: aquamarine;
     width: auto;
-    height: 200px;
+    height: 250px;
     grid-column: 2;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #dois {
-    background-color: black;
+    background-color: aquamarine;
     grid-column: 2;
     height: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#tres {
+    background-color: aquamarine;
+    grid-column: 2;
+    width: auto;
+    height: 200px;
+}
+
+#um > h2 {
+    text-align: center;
+}
+
+#um > p {
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    background-color: aqua;
+    padding: 20px 10px 20px 10px;
+    border-radius: 30px;
+    width: 200px;
+    padding: 10px;
+}
+
+input{
+    
+    border-radius: 30px;
+    border:none;
+    padding: 5px;
+    width: 70px;
+    text-align:center;
+    margin-bottom: 5px;
+    
+}
+
+button {
+    margin-top: 10px;
+    
+    padding: 5px;
+    border-radius: 30px;
+    border: none;
+    width: 80px;
+}
+
+button:hover{
+    background-color: rgba(163, 2, 163, 0.733);
+    color: white;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
