@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const linkLogin = document.querySelector('#painel #link a')
     const linkRegistro = document.querySelector('#paineldois #link a')
+    
 
     if (linkLogin) {
         linkLogin.addEventListener('click', (e) => {
@@ -21,7 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const botaodois = document.getElementById('botaodois')
     if (botaodois) {
-        botaodois.addEventListener('click', registrar)
+        botaodois.addEventListener('click', (e) =>{
+            registrar(e)
+            linkLogin(e)
+        })
     }
 
     const botao = document.getElementById('botao')
