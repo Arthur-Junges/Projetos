@@ -19,18 +19,19 @@ function carregarUsuario() {
 }
 carregarUsuario()
 
-const textodois = document.getElementById('textodois')
+const resres = document.getElementById('resres')
 const botao = document.getElementById('botao')
 botao.addEventListener('click', () => {
 
     let peso = Number(document.getElementById('peso').value)
     let altura = Number(document.getElementById('altura').value)
     let imc = peso / (altura * altura)
+    imc = imc.toFixed(1)
     
     if(peso > 0 && altura > 0){
-        textodois.innerText = imc
+        resres.innerText = imc
     } else {
-        textodois.innerText = 'Digite igual gnt débil'
+        resres.innerText = 'Digite igual gnt débil'
     }
 
 })

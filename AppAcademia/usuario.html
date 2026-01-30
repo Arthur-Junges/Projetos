@@ -16,14 +16,49 @@
         
             <section id="um">
                 <h2>Calcule seu IMC</h2>
-                <p> IMC <br>
-                    <label for="ipeso">Peso:</label><input type="number" name="ipeso" id="peso" placeholder="Ex: 80.8" required> <br>
-                    <label for="ialtura">Altura:</label><input type="number" name="ialtura" id="altura" required placeholder="Ex: 1.75"> <br>
-                    
-                    <button type="button" id="botao">Calcular</button>
+                <div id="tabela">
+                    <div id="textoum"> IMC <br>
+                        <label for="ipeso">Peso:</label><input type="number" name="ipeso" id="peso" placeholder="Ex: 80.8" required> <br>
+                        <label for="ialtura">Altura:</label><input type="number" name="ialtura" id="altura" required placeholder="Ex: 1.75"> <br>
+                        <p id="resres"></p><br>
+                        <button type="button" id="botao">Calcular</button>
+                    </div>
+                    <div id="textodois">
+                        <h3>Resultado IMC</h3>
 
-                </p>
-                <p id="textodois"></p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>IMC</th>
+                                <th>Classificação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaImc">
+                            <tr data-min="0" data-max="18.5">
+                                <td>&lt; 18.5</td>
+                                <td>Abaixo do peso</td>
+                            </tr>
+                            <tr data-min="18.5" data-max="24.9">
+                                <td>18.5–24.9</td>
+                                <td>Peso normal</td>
+                            </tr>
+                            <tr data-min="25" data-max="29.9">
+                                <td>25–29.9</td>
+                                <td>Sobrepeso</td>
+                            </tr>
+                            <tr data-min="30" data-max="34.9">
+                                <td>30–34.9</td>
+                                <td>Obesidade I</td>
+                            </tr>
+                            <tr data-min="35" data-max="39.9">
+                                <td>35–39.9</td>
+                                <td>Obesidade II</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                </div>
             </section>
             <section id="dois">
             </section>
