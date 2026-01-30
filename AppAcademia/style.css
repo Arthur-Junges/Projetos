@@ -83,7 +83,7 @@ button:hover{
     transition: all 0.3s ease;
 }
 
-#link {
+.link {
     text-align: center;
 }
 
