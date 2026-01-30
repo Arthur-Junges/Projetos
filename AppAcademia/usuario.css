@@ -1,145 +1,136 @@
 @charset "UTF-8";
 
 body{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+    background-color: #0e1114;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: gray;
 }
 
 header {
+    font-size: 1.0em;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    backdrop-filter: blur(11px);
     display: flex;
-    padding-top: 12px 0px;
-    flex-direction: column;
-    margin-top: 0px;
-    
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(105, 23, 182);
-    
+    justify-content: space-between;
+    border-bottom: 1px solid #282d36;
 }
 
-header > p{
-    color: white;
-    margin-top: 0px;
+header > h1{
+    margin: 0px 80px;
 }
 
-#logout {
-    color: white;
-    background-color: black;
-    margin-bottom: 0px;
-    border: none;
-    cursor: pointer;
-    padding: 5px 12px;
+nav {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 80px;
+}
+
+span {
+    color: #ff6600;
 }
 
 h1 {
-    margin: 0px;
+    color: white;
+    text-align: center;
 }
 
-main {
-    display: grid;
-    grid-template-columns: auto 90vw auto;
+.titulo {
+    font-size: 3em;
+    padding-top: 50px;
+}
+
+p {
+    text-align: center;
+    color: #738999;
+}
+
+ h2{
+    color: #727987;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+h3 {
     
-    gap: 5px;
-}
-
-#um {
-    background-color: aquamarine;
-    width: auto;
-    height: 350px;
-    grid-column: 2;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 20px 0;
-}
-
-#dois {
-    background-color: aquamarine;
-    grid-column: 2;
-    height: 200px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-#tres {
-    background-color: aquamarine;
-    grid-column: 2;
-    width: auto;
-    height: 200px;
-}
-
-#um > h2 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-#um > div > #textoum, #textodois {
-    text-align: center;
-    background-color: white;
-    padding: 15px;
-    border-radius: 20px;
-    width: 240px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-#textodois h3 {
-    margin-bottom: 8px;
-    font-size: 15px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 6px;
-    border-bottom: 1px solid #ccc;
-    font-size: 12px;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-
-#tabela {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-}
-
-#textoum {
-    margin-left: 50px;
-}
-
-#textodois {
-    margin-right: 50px;
-}
-
-input{
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    padding: 6px;
-    width: 90px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-button {
-    margin-top: 25px;
-    padding: 8px;
-    border-radius: 20px;
-    border: none;
-    width: 100px;
-    background-color: rgb(105, 23, 182);
     color: white;
 }
 
-button:hover{
-    background-color: rgb(85, 10, 150);
+h2:hover {
+    color: #ff6600;
+}
+
+#um {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 10px;
+    max-width: 1100px;
+    margin: 60px auto;
+    align-items: stretch;
+}
+
+#calimc {
+    
+    background-color: #15181f;
+    border: 1px solid #282d36;
+    max-width: 500px;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 0px;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: #21232b;
+}
+
+label {
+    color: white;
+}
+
+button{
+    width: 95%;
+    background-color: #ff6600;
+    color: white;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+#tabela {
+   background-color: #15181f;
+    border: 1px solid #282d36;
+    
+    border-radius: 10px;
+    padding: 25px;
+    min-height: 420px;
+    max-width: 500px;
+    
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,td {
+    border-top: none;
+    border-bottom:  1px solid #282d36;
+    text-align: left;
+}
+
+th,td:hover{
+    background-color: #21232b;
     transition: all 0.5s ease;
-    cursor: pointer;
+}
+
+#dois {
+    background-color: #14171c;
 }

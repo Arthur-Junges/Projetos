@@ -7,69 +7,86 @@
     <title>Document</title>
 </head>
 <body>
-
     <header>
-        <h1>AppAcademia</h1><br> 
-        <p id="texto"></p>
-        <button id="logout" type="button">Logout</button>
+        <h1><span>App</span>Academia</h1>
+        <nav>
+            <h2>Calculadora IMC</h2>
+            <h2>Treinos</h2>
+            <h2>Dietas</h2>
+        </nav>
     </header>
     <main>
-        
-            <section id="um">
-                <h2>Calcule seu IMC</h2>
-                <div id="tabela">
-                    <div id="textoum"> IMC <br>
-                        <label for="ipeso">Peso:</label><input type="number" name="ipeso" id="peso" placeholder="Ex: 80.8" required> <br>
-                        <label for="ialtura">Altura:</label><input type="number" name="ialtura" id="altura" required placeholder="Ex: 1.75"> <br>
-                        
-                        <button type="button" id="botao">Calcular</button>
-                    </div>
-                        <p id="resres" style="font-size: 1.5em;"></p>
-                    <div id="textodois">
-                        <h3>Resultado IMC</h3>
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>IMC</th>
-                                <th>Classificação</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabelaImc">
-                            <tr data-min="0" data-max="18.5">
-                                <td>&lt; 18.5</td>
-                                <td>Abaixo do peso</td>
-                            </tr>
-                            <tr data-min="18.5" data-max="24.9">
-                                <td>18.5–24.9</td>
-                                <td>Peso normal</td>
-                            </tr>
-                            <tr data-min="25" data-max="29.9">
-                                <td>25–29.9</td>
-                                <td>Sobrepeso</td>
-                            </tr>
-                            <tr data-min="30" data-max="34.9">
-                                <td>30–34.9</td>
-                                <td>Obesidade I</td>
-                            </tr>
-                            <tr data-min="35" data-max="39.9">
-                                <td>35–39.9</td>
-                                <td>Obesidade II</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                </div>
-            </section>
-            <section id="dois">
-            </section>
-            <section id="tres">
-
-            </section>
-        
+        <h1 class="titulo">Calculadora de <span>IMC</span></h1>
+        <p>Descubra seu Índice de Massa Corporal e entenda melhor sua saúde</p>
     </main>
 
+    <section id="um">
+        <div id="calimc">
+            <h3>Calcule seu IMC</h3>
+            <label for="ipeso">Peso(kg)</label><br>
+            <input type="number" name="ipeso" id="ipeso" placeholder="Ex:70" required> <br>
+            <label for="ialtura">Altura(cm)</label><br>
+            <input type="number" name="ialtura" id="ialtura" placeholder="Ex:175"><br>
+            <button type="button">Calcular IMC</button>
+            <div>
+            <p>Seu IMC é</p>
+            <p id="res"></p>
+            <p id="restexto"></p>
+            </div>
+        </div>
+        
+        <div id="tabela">
+            <h3>Tabela de Referência</h3>
+            <table border="" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                    </tro>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Abaixo de 18.5</td>
+                        <td>Abaixo do peso</td>
+                    </tr>
+                    <tr>
+                        <td>18.5 – 24.9</td>
+                        <td>Peso normal</td>
+                    </tr>
+                    <tr>
+                        <td>25.0 – 29.9</td>
+                        <td>Sobrepeso</td>
+                    </tr>
+                    <tr>
+                        <td>30.0 – 34.9</td>
+                        <td>Obesidade Grau I</td>
+                    </tr>
+                    <tr>
+                        <td>35.0 – 39.9</td>
+                        <td>Obesidade Grau II</td>
+                    </tr>
+                    <tr>
+                        <td>40.0 ou mais</td>
+                        <td>Obesidade Grau III</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+    <section id="dois">
+        <h1 class="titulo">Planilhas de <span>Treino</span></h1>
+        <p>Escolha o treino ideal para o seu objetivo e nível de experiência</p>
+        <div>Treino A - Peito e Tríceps</div>
+        <div>Treino B - Costas e Bíceps</div>
+        <div>Treino C - Pernas Completo</div>
+        <div>Treino D - Ombros e Abdômen</div>
+    </section>
+    <section>
+        <h1 class="titulo">Exemplos de <span>Dieta</span></h1>
+        <p>Cardápios balanceados para seu objetivo fitness</p>
+    </section>
     <script type="module" src="usuario.js"></script>
 </body>
 </html>
