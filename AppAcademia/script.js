@@ -22,10 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const botaodois = document.getElementById('botaodois')
     if (botaodois) {
-        botaodois.addEventListener('click', (e) =>{
-            registrar(e)
-            linkLogin(e)
-        })
+        botaodois.addEventListener('click', registrar)
     }
 
     const botao = document.getElementById('botao')
