@@ -15,7 +15,7 @@ linkRegistro.addEventListener('click', (e) => {
 
 //"banco de dados" 
 
-function getUsuarios (){
+export function getUsuarios (){
     return JSON.parse(localStorage.getItem("usuario")) || []
 }
 
@@ -76,8 +76,7 @@ botao.addEventListener('click',login)
 function logout() {
     localStorage.removeItem("usuarioLogado")
 }
-
-export function carregarUsuario() {
+ function carregarUsuario() {
     const email = localStorage.getItem("usuarioLogado")
     if (!email) return
 
