@@ -32,6 +32,8 @@ form.addEventListener('submit', (e) => {
 
     calcular()
     treino()
+    getNivelImc()
+    renderTreino()
     
 })
 
@@ -76,6 +78,14 @@ function calcular(){
     return imcFormatado
 }
 
+function getNivelImc() {
+    if (imc < 18.5) return "abaixo";
+    if (imc < 25) return "normal";
+    if (imc < 30) return "sobrepeso";
+    if (imc < 35) return "obesidade1";
+    if (imc < 40) return "obesidade2";
+    return "obesidade3";
+}
 
 function treino () {
 
@@ -601,20 +611,15 @@ function treino () {
             
   }
  };
-    const nivelzinho = getNivelImc(imc) 
-    if (imc < 18.5) return "abaixo";
-    if (imc < 25) return "pesoNormal";
-    if (imc < 30) return "sobrepeso";
-    if (imc < 35) return "obesidade1";
-    if (imc < 40) return "obesidade2";
-    return "obesidade3";
+    
 }
 
-    const lpeito = document.getElementById('lpeito')
+function renderTreino() {
+     const lpeito = document.getElementById('lpeito')
     const lcostas = document.getElementById('lcostas')
     const lperna = document.getElementById('lperna')
     const lombro = document.getElementById('lombro')
-    const nivel = nivelzinho(imc)
+    const nivel = getNivelImc(imc)
     const plano = planosPorImc[nivel]
 
     lpeito.innerHTML = plano.treino.peitoTriceps
@@ -625,6 +630,7 @@ function treino () {
     lperna.innerHTML = plano.treino.pernaCompleto.map(ex => `<li>${ex}</li`).join("")
 
     lombro.innerHTML = plano.treino.ombroTrapezioAbdomen.map(ex => `<li>${ex}</li>`).join("") 
+}
 
 
 
