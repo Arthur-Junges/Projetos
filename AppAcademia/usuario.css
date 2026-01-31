@@ -195,4 +195,15 @@ th,td:hover{
     border: 1px solid red;
     box-shadow: 0px solid red;
     transition: all 0.5s ease;
+    li { color: white;}
 }
+
+i{
+    color: #ff6600;
+}
+
+li {
+    color: #7f8799;
+    list-style:none;
+}
+
