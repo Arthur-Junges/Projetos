@@ -626,7 +626,7 @@ function treino () {
 
     lombro.innerHTML = plano.treino.ombroTrapezioAbdomen.map(ex => `<li>${ex}</li>`).join("") 
 
-}
+
 
     
 
