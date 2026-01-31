@@ -185,6 +185,7 @@ th,td:hover{
     height: 300px;
     border-radius: 10px; 
     border-color:#21232b;
+    margin-bottom: 5px;
 }
 
 .treino > h3 {
