@@ -83,6 +83,11 @@ h2:hover {
     margin: 0px;
 }
 
+#calimc.ativo {
+    height: 500px;
+    transition: all 0.5s ease;
+}
+
 input {
     color: white;
     width: 90%;

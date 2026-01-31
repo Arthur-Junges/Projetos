@@ -19,13 +19,17 @@ function carregarUsuario() {
 }
 carregarUsuario()
 
+const div = document.getElementById('calimc')
 const botao = document.getElementById('botao')
 const res = document.getElementById('res')
 
 botao.addEventListener('click', ()=> {
-    const peso = document.getElementById('ipeso')
-    const altura = document.getElementById('ialtura')
+    
+    const peso = document.getElementById('ipeso').value
+    const altura = document.getElementById('ialtura').value
     const imc = peso / (altura * altura)
-    console.log(imc) 
+    res.innerHTML = `Seu IMC é  <br> <span style="font-size: 1.8em; color: #db2525;">${imc.toFixed(1)}</span`
+
+    div.classList.toggle('ativo')
 })
 
