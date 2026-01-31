@@ -165,7 +165,7 @@ th,td:hover{
 
 #dois {
     background-color: #14171c;
-    
+    padding: 45px;
     
 }
 
@@ -208,6 +208,6 @@ i{
 li {
     color: #7f8799;
     list-style:none;
-    margin: 5px;
+    
 }
 
