@@ -195,7 +195,9 @@ th,td:hover{
     border: 1px solid red;
     box-shadow: 0px solid red;
     transition: all 0.5s ease;
-    li { color: white;}
+    li { color: white;
+        
+    }
 }
 
 i{
@@ -205,5 +207,6 @@ i{
 li {
     color: #7f8799;
     list-style:none;
+    margin: 5px;
 }
 

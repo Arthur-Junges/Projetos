@@ -30,6 +30,8 @@ form.addEventListener('submit', (e) => {
     div.classList.add('ativo')
     div.classList.remove('desativo')
 
+    const imcFormatado = calcular()
+    const nivel = getNivelImc(imcFormatado)
     renderTreino(nivel)
     
 })
@@ -96,7 +98,7 @@ const planosPorImc = {
                     "Tríceps Testa - 3 x 8-10",
                     "Mergulho no Banco - 3x até a falha",
                 ],
-                costasBiceps: [
+                costaBiceps: [
                     "Puxada Alta - 4 x 8-10",
                     "Remada Curvada - 3 x 8-10",
                     "Remada Baixa - 3 x 10-12",
@@ -614,19 +616,36 @@ function renderTreino(nivel) {
     const lcostas = document.getElementById('lcostas')
     const lperna = document.getElementById('lperna')
     const lombro = document.getElementById('lombro')
-    const nivel = getNivelImc(imc)
+    
     const plano = planosPorImc[nivel]
 
     lpeito.innerHTML = plano.treino.peitoTriceps
-    .map(ex => `<li>${ex}</li`).join("")
+    .map(ex => `<li> <i class="fa-solid fa-circle-check"></i>  ${ex}</li>`).join("")
 
-    lcostas.innerHTML = plano.treino.costaBiceps.map(ex => `<li>${ex}</li>`).join("")
+    lcostas.innerHTML = plano.treino.costaBiceps.map(ex => `<li><i class="fa-solid fa-circle-check"></i>  ${ex}</li>`).join("")
 
-    lperna.innerHTML = plano.treino.pernaCompleto.map(ex => `<li>${ex}</li`).join("")
+    lperna.innerHTML = plano.treino.pernaCompleto.map(ex => `<li><i class="fa-solid fa-circle-check"></i>  ${ex}</li>`).join("")
 
-    lombro.innerHTML = plano.treino.ombroTrapezioAbdomen.map(ex => `<li>${ex}</li>`).join("") 
+    lombro.innerHTML = plano.treino.ombroTrapezioAbdomen.map(ex => `<li><i class="fa-solid fa-circle-check"></i>  ${ex}</li>`).join("") 
 }
 
+
+function salvarDado(){
+    const email = localStorage.getItem("usuarioLogado")
+    if (!email) {
+        alert("Faça Login")
+        return
+    }
+
+    const usuarios = getUsuarios()
+    const usuario = usuarios.find(u => u.email === email)
+
+    usuario.dados.push(novoDado.value)
+    salvarUsuarios(usuario)
+
+    novoDado.value = ""
+    carregarUsuario()
+}
 
 
     
