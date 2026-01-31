@@ -30,10 +30,7 @@ form.addEventListener('submit', (e) => {
     div.classList.add('ativo')
     div.classList.remove('desativo')
 
-    calcular()
-    treino()
-    getNivelImc()
-    renderTreino()
+    renderTreino(nivel)
     
 })
 
@@ -78,7 +75,8 @@ function calcular(){
     return imcFormatado
 }
 
-function getNivelImc() {
+function getNivelImc(imcFormatado) {
+    const imc = Number(imcFormatado)
     if (imc < 18.5) return "abaixo";
     if (imc < 25) return "normal";
     if (imc < 30) return "sobrepeso";
@@ -87,9 +85,7 @@ function getNivelImc() {
     return "obesidade3";
 }
 
-function treino () {
-
-    const planosPorImc = {
+const planosPorImc = {
         abaixo : {
             treino : {
                 peitoTriceps: [
@@ -611,11 +607,10 @@ function treino () {
             
   }
  };
-    
-}
 
-function renderTreino() {
-     const lpeito = document.getElementById('lpeito')
+
+function renderTreino(nivel) {
+    const lpeito = document.getElementById('lpeito')
     const lcostas = document.getElementById('lcostas')
     const lperna = document.getElementById('lperna')
     const lombro = document.getElementById('lombro')
