@@ -601,11 +601,20 @@ function treino () {
             
   }
  };
+    const nivelzinho = getNivelImc(imc) 
+    if (imc < 18.5) return "abaixo";
+    if (imc < 25) return "pesoNormal";
+    if (imc < 30) return "sobrepeso";
+    if (imc < 35) return "obesidade1";
+    if (imc < 40) return "obesidade2";
+    return "obesidade3";
+}
+
     const lpeito = document.getElementById('lpeito')
     const lcostas = document.getElementById('lcostas')
     const lperna = document.getElementById('lperna')
     const lombro = document.getElementById('lombro')
-    const nivel = getNivelImc(imcFormatado)
+    const nivel = nivelzinho(imc)
     const plano = planosPorImc[nivel]
 
     lpeito.innerHTML = plano.treino.peitoTriceps
