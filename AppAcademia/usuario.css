@@ -88,6 +88,11 @@ h2:hover {
     transition: all 0.5s ease;
 }
 
+#calimc.desativo {
+    height: 300px;
+    transition: all 0.5s ease;
+}
+
 input {
     color: white;
     width: 90%;
@@ -114,12 +119,14 @@ button{
     cursor: pointer;
 }
 
+
 #tabela {
     background-color: #15181f;
     border: 1px solid #282d36;
     border-radius: 10px;
     padding: 25px;
     min-height: 420px;
+    max-height: 420px;
     max-width: 500px;
     overflow: hidden;
     box-sizing: border-box;
