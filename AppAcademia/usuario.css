@@ -65,8 +65,8 @@ h2:hover {
 
 #um {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
     max-width: 1100px;
     margin: 60px auto;
     align-items: stretch;
@@ -77,21 +77,25 @@ h2:hover {
     background-color: #15181f;
     border: 1px solid #282d36;
     max-width: 500px;
+    height: 300px;
     border-radius: 10px;
     padding: 25px;
     margin: 0px;
 }
 
 input {
+    color: white;
     width: 90%;
     padding: 12px;
     border-radius: 10px;
     border: none;
+    margin-bottom: 30px;
     background-color: #21232b;
 }
 
 label {
     color: white;
+    
 }
 
 button{
@@ -102,28 +106,40 @@ button{
     padding: 15px;
     border-radius: 10px;
     border: none;
-    
+    cursor: pointer;
 }
 
 #tabela {
-   background-color: #15181f;
+    background-color: #15181f;
     border: 1px solid #282d36;
-    
     border-radius: 10px;
     padding: 25px;
     min-height: 420px;
     max-width: 500px;
-    
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 table {
+    
     border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+    border-color: #282d36;
+    overflow: hidden;
+}
+
+th {
+    color: white;
+    background-color: transparent;
 }
 
 th,td {
+    border: none;
     border-top: none;
     border-bottom:  1px solid #282d36;
     text-align: left;
+    font-size: 1.0em;
 }
 
 th,td:hover{
@@ -131,6 +147,40 @@ th,td:hover{
     transition: all 0.5s ease;
 }
 
+.timc {
+    color: #738999;;
+}
+
 #dois {
     background-color: #14171c;
+    
+    
+}
+
+#quadro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+}
+
+.treino {
+    
+    background-color: #15181f;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px; 
+    border-color:#21232b;
+}
+
+.treino > h3 {
+    padding: 20px;
+}
+
+.treino:hover {
+    border: 1px solid red;
+    box-shadow: 0px solid red;
+    transition: all 0.5s ease;
 }

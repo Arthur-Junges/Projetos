@@ -19,5 +19,13 @@ function carregarUsuario() {
 }
 carregarUsuario()
 
+const botao = document.getElementById('botao')
+const res = document.getElementById('res')
 
+botao.addEventListener('click', ()=> {
+    const peso = document.getElementById('ipeso')
+    const altura = document.getElementById('ialtura')
+    const imc = peso / (altura * altura)
+    console.log(imc) 
+})
 

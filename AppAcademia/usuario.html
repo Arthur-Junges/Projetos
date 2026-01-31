@@ -23,13 +23,13 @@
     <section id="um">
         <div id="calimc">
             <h3>Calcule seu IMC</h3>
-            <label for="ipeso">Peso(kg)</label><br>
-            <input type="number" name="ipeso" id="ipeso" placeholder="Ex:70" required> <br>
-            <label for="ialtura">Altura(cm)</label><br>
-            <input type="number" name="ialtura" id="ialtura" placeholder="Ex:175"><br>
-            <button type="button">Calcular IMC</button>
+            <label for="ipeso">Peso(kg)</label>
+            <input type="number" name="ipeso" id="ipeso" placeholder="Ex:70" required> 
+            <label for="ialtura">Altura(cm)</label>
+            <input type="number" name="ialtura" id="ialtura" placeholder="Ex:175">
+            <button type="button" id="botao">Calcular IMC</button>
             <div>
-            <p>Seu IMC é</p>
+            <p></p>
             <p id="res"></p>
             <p id="restexto"></p>
             </div>
@@ -46,28 +46,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Abaixo de 18.5</td>
-                        <td>Abaixo do peso</td>
+                        <td class="timc">Abaixo de 18.5</td>
+                        <td style="color: #60a5e6;" >Abaixo do peso</td>
                     </tr>
                     <tr>
-                        <td>18.5 – 24.9</td>
-                        <td>Peso normal</td>
+                        <td class="timc">18.5 – 24.9</td>
+                        <td style="color: #49de78;">Peso normal</td>
                     </tr>
                     <tr>
-                        <td>25.0 – 29.9</td>
-                        <td>Sobrepeso</td>
+                        <td class="timc">25.0 – 29.9</td>
+                        <td style="color: #facc16;">Sobrepeso</td>
                     </tr>
                     <tr>
-                        <td>30.0 – 34.9</td>
-                        <td>Obesidade Grau I</td>
+                        <td class="timc">30.0 – 34.9</td>
+                        <td style="color: #fa913c;">Obesidade Grau I</td>
                     </tr>
                     <tr>
-                        <td>35.0 – 39.9</td>
-                        <td>Obesidade Grau II</td>
+                        <td class="timc">35.0 – 39.9</td>
+                        <td style="color: #f77272;">Obesidade Grau II</td>
                     </tr>
                     <tr>
-                        <td>40.0 ou mais</td>
-                        <td>Obesidade Grau III</td>
+                        <td class="timc">40.0 ou mais</td>
+                        <td style="color: #db2323;">Obesidade Grau III</td>
                     </tr>
                 </tbody>
             </table>
@@ -78,10 +78,12 @@
     <section id="dois">
         <h1 class="titulo">Planilhas de <span>Treino</span></h1>
         <p>Escolha o treino ideal para o seu objetivo e nível de experiência</p>
-        <div>Treino A - Peito e Tríceps</div>
-        <div>Treino B - Costas e Bíceps</div>
-        <div>Treino C - Pernas Completo</div>
-        <div>Treino D - Ombros e Abdômen</div>
+        <div id="quadro">
+            <div class="treino"><h3> 🏋🏻 Treino A - Peito e Tríceps</h3></div>
+            <div class="treino"><h3>Treino B - Costas e Bíceps</h3></div>
+            <div class="treino"><h3>Treino C - Pernas Completo</h3></div>
+            <div class="treino"><h3>Treino D - Ombros e Abdômen</h3></div>
+        </div>
     </section>
     <section>
         <h1 class="titulo">Exemplos de <span>Dieta</span></h1>
