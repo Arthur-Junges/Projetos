@@ -57,6 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (nivelSalvo) {
         renderTreino(nivelSalvo)
+        renderDieta(nivelSalvo)
 
         const div = document.getElementById('calimc')
         div.classList.add('ativo')

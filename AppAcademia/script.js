@@ -4,9 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const linkLogin = document.querySelector('#painel .link a')
     const linkRegistro = document.querySelector('#paineldois .link a')
-    
+     
+    const botaodois = document.getElementById('botaodois')
+    if (botaodois) {
+        botaodois.addEventListener('click', registrar)
+    }
 
-    if (linkLogin) {
+    const botao = document.getElementById('botao')
+    if (botao) {
+        botao.addEventListener('click', login)
+    }
+
+    if (linkLogin && botaodois) {
         linkLogin.addEventListener('click', (e) => {
             e.preventDefault()
             tela.classList.add('login')
@@ -20,15 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    const botaodois = document.getElementById('botaodois')
-    if (botaodois) {
-        botaodois.addEventListener('click', registrar)
-    }
-
-    const botao = document.getElementById('botao')
-    if (botao) {
-        botao.addEventListener('click', login)
-    }
+   
 
 })
 

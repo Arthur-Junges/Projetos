@@ -1,14 +1,10 @@
 @charset "UTF-8";
 
-@media screen and (max-width:718px){
-  #tela {
-    
-}
-}
 
-@media screen and (max-width: 500px){
 
-}
+
+
+
 body{
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -18,13 +14,10 @@ body{
 
 
 #tela {
-    background-image: url(../AppAcademia/imagem/pexels-dropshado-32543165.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: aquamarine;
+    background-color: #000000;
     border-radius: 30px;
-    width: 70vw;
+    box-shadow: 0px 0px 20px #ff66002d;
+    width: 90%;
     height: 60vh;
 
     display: flex;
@@ -36,17 +29,14 @@ body{
     transform: translate(-50%, -50%);
 }
 
+.link{
+    position:absolute;
+    left: -9999px
+}
 
-#tela > #painel {
-    
-    background-color: #21232b;
-    border-radius: 30px;
-    height: 100%;
+#painel,#paineldois {
+    justify-content: space-evenly;
     width: 50%;
-    box-sizing: border-box;
-    transition: transform 0.6s ease;
-    transform: translateX(0);
-    
 }
 
 
@@ -97,24 +87,77 @@ button:hover{
 .link {
     text-align: center;
     color: white;
+    
 }
 
 #paineldois{
     text-align: center;
-    background-color: white;
+    background-color: #21232b;
     border-radius: 30px;
     height: 100%;
     width: 50%;
     box-sizing: border-box;
-    transition: transform 0.6s ease;
-    transform: translate(100%);
+    
     
 }
 
-#tela.login #painel {
-    transform: translateX(-100%);
+@media screen and (max-width: 500px){
+        body {
+    background-color: #0e1114;
+  }
+
+  
+
+  .link {
+     position: static;   /* ou relative */
+        left: auto;         /* reseta o -9999px */
+        display: block;     /* garante que apareça */
+        margin-top: 15px;   /* opcional */
+        text-align: center;
+  }
+
+  #painel,
+  #paineldois {
+    
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.6s ease;
+  }
+
+  #painel {
+    background: #21232b;
+    transform: translateY(0);
+  }
+
+  #paineldois {
+  background: #15181f;
+  transform: translateY(100%);
+  }
+
+  #tela.login #painel {
+  transform: translateY(-100%);
 }
 
 #tela.login #paineldois {
-    transform: translateX(0);
+  transform: translateY(0);
 }
+
+  h1 {
+    font-size: 1.8em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  input {
+    width: 85%;
+    font-size: 15px;
+  }
+
+  button {
+    width: 70%;
+  }
+}
+
+
