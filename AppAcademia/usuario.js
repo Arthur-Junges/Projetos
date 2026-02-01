@@ -34,10 +34,7 @@ form.addEventListener('submit', (e) => {
     const nivel = getNivelImc(imcFormatado)
     renderTreino(nivel)
     localStorage.setItem('nivelImc', nivel)
-    
-})
-
-window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('DOMContentLoaded', () => {
     const nivelSalvo = localStorage.getItem('nivelImc')
 
     if (nivelSalvo) {
@@ -48,6 +45,9 @@ window.addEventListener('DOMContentLoaded', () => {
         div.classList.remove('desativo')
     }
 })
+})
+
+
 
 
 function calcular(){
@@ -632,6 +632,8 @@ function renderTreino(nivel) {
     const lombro = document.getElementById('lombro')
     
     const plano = planosPorImc[nivel]
+    if(!plano) return
+
 
     lpeito.innerHTML = plano.treino.peitoTriceps
     .map(ex => `<li> <i class="fa-solid fa-circle-check"></i>  ${ex}</li>`).join("")

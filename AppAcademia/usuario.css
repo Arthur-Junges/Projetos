@@ -186,6 +186,7 @@ th,td:hover{
     border-color:#21232b;
     margin-bottom: 5px;
     border: 1px solid transparent;
+    transition: all 0.5s ease;
 }
 
 .treino > h3 {
@@ -197,7 +198,7 @@ th,td:hover{
     box-shadow: 0px solid red;
     width: 530px;
     height: 330px;
-    font-size: x-large;
+    font-size: large;
     transition: all 0.5s ease;
     li { color: white;
         
