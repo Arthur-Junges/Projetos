@@ -65,6 +65,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
 })
 
+const navLinks = document.querySelectorAll('#menu a.link');
+const header = document.querySelector('header');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    const targetId = link.dataset.target;
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    const headerHeight = header.offsetHeight;
+
+    const top =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      headerHeight -
+      20;
+
+    window.scrollTo({
+      top,
+      behavior: 'smooth'
+    });
+  });
+});
+
+
+
 
 function calcular(){
     

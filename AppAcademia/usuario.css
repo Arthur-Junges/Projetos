@@ -7,7 +7,7 @@
         flex-wrap: wrap;
     }
 
-    nav {
+    menu {
         position:absolute;
         left: -9999px
     }
@@ -78,12 +78,23 @@ header > h1{
     margin: 0px 80px;
 }
 
-nav {
+menu {
     display: flex;
     gap: 20px;
     flex-direction: row;
     justify-content: space-between;
     margin: 0px 80px;
+}
+
+a{
+    text-decoration: none;
+    color: #727987;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ff6600;
+    transition: all 0.3s ease;
 }
 
 span {
