@@ -33,12 +33,25 @@ form.addEventListener('submit', (e) => {
     const imcFormatado = calcular()
     const nivel = getNivelImc(imcFormatado)
     renderTreino(nivel)
-    localStorage.setItem('nivelImc', nivel)
+    // Pega o email do usuário logado
+    const email = localStorage.getItem("usuarioLogado")
+
+    // Pega os níveis salvos (ou cria objeto vazio)
+    const niveisPorUsuario = JSON.parse(localStorage.getItem('niveisPorUsuario') || "{}")
+
+    // Salva o nível do usuário atual
+    niveisPorUsuario[email] = nivel
+
+    // Atualiza o localStorage
+    localStorage.setItem('niveisPorUsuario', JSON.stringify(niveisPorUsuario))
+
     
 })
 
 window.addEventListener('DOMContentLoaded', () => {
-    const nivelSalvo = localStorage.getItem('nivelImc')
+    const email = localStorage.getItem("usuarioLogado")
+    const niveisPorUsuario = JSON.parse(localStorage.getItem('niveisPorUsuario') || "{}")
+    const nivelSalvo = niveisPorUsuario[email]
 
     if (nivelSalvo) {
         renderTreino(nivelSalvo)
@@ -47,6 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
         div.classList.add('ativo')
         div.classList.remove('desativo')
     }
+
 })
 
 
