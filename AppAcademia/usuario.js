@@ -34,7 +34,10 @@ form.addEventListener('submit', (e) => {
     const nivel = getNivelImc(imcFormatado)
     renderTreino(nivel)
     localStorage.setItem('nivelImc', nivel)
-    window.addEventListener('DOMContentLoaded', () => {
+    
+})
+
+window.addEventListener('DOMContentLoaded', () => {
     const nivelSalvo = localStorage.getItem('nivelImc')
 
     if (nivelSalvo) {
@@ -45,9 +48,6 @@ form.addEventListener('submit', (e) => {
         div.classList.remove('desativo')
     }
 })
-})
-
-
 
 
 function calcular(){
