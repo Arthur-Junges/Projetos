@@ -179,7 +179,6 @@ th,td:hover{
 }
 
 .treino {
-    
     background-color: #15181f;
     width: 500px;
     height: 300px;
@@ -209,6 +208,6 @@ i{
 li {
     color: #7f8799;
     list-style:none;
-    
+    margin: 5px 0px;
 }
 

@@ -286,7 +286,7 @@ const planosPorImc = {
                 "Pulldown – 3x15",
                 "Rosca no Cabo – 3x12",
                 "Rosca Concentrada – 3x10",
-                "Esteira - 30 Minutos"
+                "Obs: Esteira - 30 Minutos"
             ],
 
             pernaCompleto: [
@@ -303,7 +303,7 @@ const planosPorImc = {
                 "Elevação Frontal Cabo – 3x12",
                 "Encolhimento Máquina – 3x15",
                 "Abdominal Máquina – 4x15",
-                "Esteira - 30 Minutos"
+                "Obs: Esteira - 30 Minutos"
             ]
             },
             dietaUm: {
@@ -368,7 +368,7 @@ const planosPorImc = {
                 "Tríceps Máquina – 3x15",
                 "Tríceps Pulley Leve – 3x15",
                 "Tríceps Corda – 3x15",
-                "Esteira - 45 Minutos"
+                "Obs: Esteira - 45 Minutos"
             ],
 
             costaBiceps: [
@@ -385,7 +385,7 @@ const planosPorImc = {
                 "Agachamento Assistido – 3x10",
                 "Flexora Deitada – 3x15",
                 "Stiff Leve – 3x12",
-                "Esteira - 45 Minutos"
+                "Obs: Esteira - 45 Minutos"
             ],
 
             ombroTrapezioAbdomen: [
@@ -455,7 +455,7 @@ const planosPorImc = {
                 "Tríceps Máquina – 3x15",
                 "Tríceps Pulley – 3x15",
                 "Tríceps Corda – 3x15",
-                "Esteira - 1 Hora",
+                "Obs: Esteira - 1 Hora",
             ],
 
             costaBiceps: [
@@ -472,7 +472,7 @@ const planosPorImc = {
                 "Agachamento Assistido – 3x10",
                 "Flexora Sentada – 3x15",
                 "Ponte de Glúteo – 3x15",
-                "Esteira - 1 Hora"
+                "Obs: Esteira - 1 Hora"
             ],
 
             ombroTrapezioAbdomen: [
@@ -547,7 +547,7 @@ const planosPorImc = {
                 "Pulldown – 3x20",
                 "Rosca Máquina – 3x20",
                 "Rosca Cabo – 3x20",
-                "Esteira - 90 Minutos"
+                "Obs: Esteira - 90 Minutos"
             ],
 
             pernaCompleto: [
@@ -564,7 +564,7 @@ const planosPorImc = {
                 "Elevação Frontal Leve – 3x20",
                 "Encolhimento Leve – 3x20",
                 "Respiração Diafragmática – 5 min",
-                "Esteira - 90 Minutos"
+                "Obs: Esteira - 90 Minutos"
             ]
             },
             dietaUm: {
@@ -646,6 +646,8 @@ function salvarDado(){
     novoDado.value = ""
     carregarUsuario()
 }
+
+carregarUsuario()
 
 
     
