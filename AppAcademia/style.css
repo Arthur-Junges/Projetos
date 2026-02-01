@@ -1,13 +1,22 @@
 @charset "UTF-8";
 
+@media screen and (max-width:718px){
+  #tela {
+    
+}
+}
+
+@media screen and (max-width: 500px){
+
+}
 body{
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(0, 0, 0, 0.747);
+    background-color: #0e1114;
 }
 
 
-/* imagem no container tela, com as configurações background*/
+
 #tela {
     background-image: url(../AppAcademia/imagem/pexels-dropshado-32543165.jpg);
     background-size: cover;
@@ -29,7 +38,8 @@ body{
 
 
 #tela > #painel {
-    background-color: white;
+    
+    background-color: #21232b;
     border-radius: 30px;
     height: 100%;
     width: 50%;
@@ -45,7 +55,7 @@ h1{
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
-    color: black;
+    color: #ff6600;
 }
 
 #formulario{
@@ -74,7 +84,8 @@ button {
     margin-top: 20px;
     cursor: pointer;
     width: 150px;
-    background-color: #4e42eca9;
+    background-color: #ff6600;
+    color: white;
 }
 
 button:hover{
@@ -85,6 +96,7 @@ button:hover{
 
 .link {
     text-align: center;
+    color: white;
 }
 
 #paineldois{

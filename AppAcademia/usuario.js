@@ -33,6 +33,8 @@ form.addEventListener('submit', (e) => {
     const imcFormatado = calcular()
     const nivel = getNivelImc(imcFormatado)
     renderTreino(nivel)
+    renderDieta(nivel)
+
     // Pega o email do usuário logado
     const email = localStorage.getItem("usuarioLogado")
 
@@ -657,6 +659,33 @@ function renderTreino(nivel) {
     lperna.innerHTML = plano.treino.pernaCompleto.map(ex => `<li><i class="fa-solid fa-circle-check"></i>  ${ex}</li>`).join("")
 
     lombro.innerHTML = plano.treino.ombroTrapezioAbdomen.map(ex => `<li><i class="fa-solid fa-circle-check"></i>  ${ex}</li>`).join("") 
+}
+
+function renderDieta(nivel){
+    const lcafeum = document.getElementById('lcafeum')
+    const lalmocoum = document.getElementById('lalmocoum')
+    const ljantarum = document.getElementById('ljantarum')
+    const lcafedois = document.getElementById('lcafedois')
+    const lalmocodois = document.getElementById('lalmocodois')
+    const ljantardois = document.getElementById('ljantardois')
+    const lcafetres = document.getElementById('lcafetres')
+    const lalmocotres = document.getElementById('lalmocotres')
+    const ljantartres = document.getElementById('ljantartres')
+
+    const plano = planosPorImc[nivel]
+    if(!plano) return
+
+    lcafeum.innerHTML = plano.dietaUm.cafe.map(d => `<li> <i class="fa-solid fa-circle"></i> ${d} </li>`)
+    lalmocoum.innerHTML = plano.dietaUm.almoco.map(d => `<li> <i class="fa-solid fa-circle"></i> ${d} </li>`)
+    ljantarum.innerHTML = plano.dietaUm.jantar.map(d => `<li> <i class="fa-solid fa-circle"></i> ${d} </li>`)
+
+    lcafedois.innerHTML = plano.dietaDois.cafe.map(d => `<li> <i class="fa-solid fa-circle"></i> ${d} </li>`)
+    lalmocodois.innerHTML = plano.dietaDois.almoco.map(d => `<li> <i class="fa-solid fa-circle"></i> ${d} </li>`)
+    ljantardois.innerHTML = plano.dietaDois.jantar.map(d => `<li> <i class="fa-solid fa-circle"></i> ${d} </li>`)
+
+    lcafetres.innerHTML = plano.dietaTres.cafe.map(d => `<li> <i class="fa-solid fa-circle"></i> ${d} </li>`)
+    lalmocotres.innerHTML = plano.dietaTres.almoco.map(d => `<li> <i class="fa-solid fa-circle"></i> ${d} </li>`)
+    ljantartres.innerHTML = plano.dietaTres.jantar.map(d => `<li> <i class="fa-solid fa-circle"></i> ${d} </li>`)
 }
 
 

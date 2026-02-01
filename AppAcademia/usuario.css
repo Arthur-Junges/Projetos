@@ -183,7 +183,7 @@ button{
     border: 1px solid #282d36;
     border-radius: 10px;
     padding: 25px;
-    height: 420px;
+    min-height: 420px;
     width: 526px;
     overflow: hidden;
     box-sizing: border-box;
@@ -280,16 +280,45 @@ li {
 }
 
 .qdieta {
+    display: flex;
+    flex-direction:column;
+    
     width: 350px;
-    height: 630px;
+    min-height: 630px;
     background-color: #15181f;
     border-radius: 10px;
-    text-align: center;
     border: 1px solid transparent;
     transition: all 0.5s ease;
+}
+
+.qdieta > h3 {
+    text-align: center;
 }
 
 .qdieta:hover {
     border: 1px solid red;
     transition: all 0.5s ease;
+    width: 370px;
+    min-height: 650px;
+    li {
+        color: white;
+    }
+}
+
+.planodieta {
+    width: 90%;
+    min-height: 200px;
+    background-color: #1b1f26;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+h4{
+    margin-left: 15px;
+    color: white;
+}
+
+.planodieta > li {
+    color: #7f8799;
 }
