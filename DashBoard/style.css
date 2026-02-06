@@ -37,6 +37,7 @@ input{
     border-style: hidden;
     border-color: #536278;
     width: 60%;
+    max-width: 500px;
     padding: 15px 40px;
     border-radius: 10px;
     color: white;
@@ -53,7 +54,8 @@ input:focus {
 .top {
     
     width: 80%;
-    height: 70px;
+    max-width: 650px;
+    height: auto;
     margin: auto;
     background-color: #09101c;
     border: 1px solid transparent;
@@ -62,10 +64,24 @@ input:focus {
     transition: all 0.5s ease;
 }
 
-.linha {
+.posicao {
+    width: 80%;
+    max-width: 650px;
+    height: 75px;
+    margin: auto;
+    background-color: #0f172a;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
+}
+
+.posicao > .linha {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: -30px;
+    align-items: center;
+    cursor: pointer;
 }
 
 .linha > p{
@@ -74,9 +90,65 @@ input:focus {
 }
 
 
-.top:hover {
+.posicao:hover {
     border: 1px solid rgba(255, 255, 255, 0.24);
     transition: all 0.5s ease;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rank {
+    color: #94a3b8;
+    font-size: 14px;
+    width: 20px;
+}
+
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+
+.nome-coin {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+.sigla {
+    color: #94a3b8;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+.preco-box {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.preco {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+.verde {
+    color: #22c55e;
+    font-size: 14px;
+    margin: 0;
+}
+
+.vermelho {
+    color: #ef4444;
+    font-size: 14px;
+    margin: 0;
 }
 
 footer {
