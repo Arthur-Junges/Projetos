@@ -20,8 +20,13 @@
             <p>Busque qualquer criptomoeda e veja o gráfico de valorização do último ano</p>
             <div id="divinput">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input  type="text" placeholder=" Buscar moeda para ver gráfico">
+                <input  type="text" id="input" placeholder=" Buscar moeda para ver gráfico">
             </div>
+            <div id="sugestoes"></div>
+        </section>
+        <section id="grafico-global">
+            <h2 id="titulo-grafico"></h2>
+            <canvas id="canvas-global"></canvas>
         </section>
         <section id="dois">
                 <p>Top 10 Market Cap</p>
@@ -34,7 +39,7 @@
         <p>Subiu nas últimas 24h</p>
         <p>Caiu nas últimas 24h</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

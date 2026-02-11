@@ -23,13 +23,46 @@ header{
 
 #divinput {
     position: relative;
+    width: 60%;
+    margin:auto;
+    max-width: 500px;
 }
 
 #divinput i {
     position: absolute;
     top: 30%;
     padding-left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
     color: #678896;
+}
+
+#sugestoes {
+    width: 60%;
+    max-width: 500px;
+    margin: auto;
+    background-color: #0f172a;
+    border-radius: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.item-sugestao{
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.item-sugestao:hover{
+    background-color: #1e293b;
+}
+
+.item-sugestao img{
+    width: 20px;
 }
 
 input{
@@ -65,9 +98,9 @@ input:focus {
 }
 
 .posicao {
-    width: 80%;
+    width: 90%;
     max-width: 650px;
-    height: 75px;
+    min-height: 75px;
     margin: auto;
     background-color: #0f172a;
     border: 1px solid transparent;
@@ -149,6 +182,22 @@ input:focus {
     color: #ef4444;
     font-size: 14px;
     margin: 0;
+}
+
+.grafico-container{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.posicao.ativa{
+    height: 400px;
+}
+
+.posicao.ativa .grafico-container{
+    height: 300px;
+    margin-top: 20px;
 }
 
 footer {
